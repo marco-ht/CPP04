@@ -60,6 +60,7 @@ All exercises must be written in **C++98** and compiled using the appropriate fl
   - Avoid memory leaks when using `new` / `delete`
   - Each header must be self-contained and protected by include guards
   - No function implementations inside headers (except templates)
+  - Test thoroughly for memory leaks using tools like `valgrind`.
 
 ## Exercises
 
@@ -301,15 +302,6 @@ Each exercise produces its own executable. Navigate to the exercise directory an
 ```
 
 Each program will demonstrate the polymorphic behavior, proper memory management, and interface implementation.
-
-## Submission and Peer Evaluation
-
-- Submit your project through the designated Git repository.
-- Only the files within your Git repository will be evaluated during defense.
-- Double-check that all file names and structures match the subject requirements.
-- Ensure your Makefile compiles without relinking and includes all required rules.
-- Test thoroughly for memory leaks using tools like `valgrind`.
-- Pay special attention to deep copy implementation and virtual destructors.
 
 ## Acknowledgments
 
