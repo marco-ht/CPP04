@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongWrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 18:28:36 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/28 18:28:56 by mpierant         ###   ########.fr       */
+/*   Created: 2025/10/28 18:52:38 by mpierant          #+#    #+#             */
+/*   Updated: 2025/10/29 02:12:19 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 #include <string>
-#include "WrongAnimal.hpp"
 
-class   WrongCat : public WrongAnimal
+class   Brain
 {
-    protected:
-    std::string type;
+    private:
+    static const int N = 100;
+    std::string ideas[N];
 
     public:
     // Orthodox Canonical Form
-    WrongCat();
-    WrongCat(WrongCat& other);
-    WrongCat& operator=(WrongCat &other);
-    ~WrongCat();
+    Brain();
+    Brain(const Brain& other);
+    Brain& operator=(const Brain &other);
+    ~Brain();
     // End Orthodox Canonical Form
 
-    void    makeSound();
-    std::string    getType();
+    void        setIdeas(int i, const std::string str);
+    std::string getIdeas(int i) const ;
 };
 
 #endif

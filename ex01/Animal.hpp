@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongWrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 18:28:36 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/28 18:28:56 by mpierant         ###   ########.fr       */
+/*   Created: 2025/10/28 16:48:02 by mpierant          #+#    #+#             */
+/*   Updated: 2025/10/29 00:15:29 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 #include <string>
-#include "WrongAnimal.hpp"
 
-class   WrongCat : public WrongAnimal
+class   Animal
 {
     protected:
     std::string type;
 
     public:
     // Orthodox Canonical Form
-    WrongCat();
-    WrongCat(WrongCat& other);
-    WrongCat& operator=(WrongCat &other);
-    ~WrongCat();
+    Animal();
+    Animal(Animal& other);
+    Animal& operator=(Animal &other);
+    virtual ~Animal();
     // End Orthodox Canonical Form
 
-    void    makeSound();
-    std::string    getType();
+    virtual void    makeSound();
+    virtual std::string    getType();
+    virtual void    setId(int i, std::string str);
+    virtual std::string    getId(int i);
 };
 
 #endif
