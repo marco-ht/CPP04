@@ -11,7 +11,7 @@ OBJ_DIR = objs
 
 # Lista dei file sorgente e relativi oggetti
 SRC     = $(SRC_DIR)/main.cpp $(SRC_DIR)/Animal.cpp $(SRC_DIR)/Dog.cpp $(SRC_DIR)/Cat.cpp $(SRC_DIR)/WrongAnimal.cpp $(SRC_DIR)/WrongCat.cpp $(SRC_DIR)/Brain.cpp
-OBJ     = $(OBJ_DIR)/main.o $(SRC_DIR)/Animal.cpp $(OBJ_DIR)/Dog.o $(OBJ_DIR)/Cat.o $(OBJ_DIR)/WrongAnimal.o $(OBJ_DIR)/WrongCat.o $(SRC_DIR)/Brain.o
+OBJ     = $(OBJ_DIR)/main.o $(SRC_DIR)/Animal.cpp $(OBJ_DIR)/Dog.o $(OBJ_DIR)/Cat.o $(OBJ_DIR)/WrongAnimal.o $(OBJ_DIR)/WrongCat.o $(OBJ_DIR)/Brain.o
 
 # Comando di rimozione
 RM      = rm -rf
