@@ -1,0 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/30 18:53:12 by mpierant          #+#    #+#             */
+/*   Updated: 2025/10/30 20:09:47 by mpierant         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <iostream>
+#include <string>
+#include "AMateria.hpp"
+#include "Ice.hpp"
+
+// Orthodox Canonical Form
+Ice::Ice():
+AMateria("ice")
+{
+    std::cout << "Ice: default constructor" << std::endl;
+}
+
+Ice::Ice(Ice &other):
+AMateria(&other)
+{
+    std::cout << "Ice: copy constructor" << std::endl;
+}
+
+Ice& Ice::operator=(const Ice &other)
+{
+    std::cout << "Ice: assignment operator" << std::endl;
+    return (*this);
+}
+
+Ice::~Ice()
+{
+    std::cout << "Ice: destructor" << std::endl;
+}
+// End Orthodox Canonical Form
+
+//Returns the materia type
+std::string const & Ice::getType() const
+{
+    return (type);
+}
+
+Ice* Ice::clone() const
+{
+    return (new Ice);
+}
+
+void Ice::use(ICharacter& target)
+{
+    std::cout << "* shoots an ice bolt at " << target.getname() <<" *" << std::endl;
+}
