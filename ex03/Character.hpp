@@ -6,16 +6,18 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:15:01 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 00:45:40 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 02:31:01 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-# define ICHARACTER_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
 #include <string>
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 class Character : public ICharacter
 {
@@ -30,6 +32,8 @@ class Character : public ICharacter
         Character& operator=(const Character &other);
         ~Character();
         // End Orthodox Canonical Form
+
+        Character(std::string name);
 
         std::string const & getName() const;
         void equip(AMateria* m);

@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 01:04:18 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 01:34:25 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 02:41:57 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ class MateriaSource : public IMateriaSource
         MateriaSource& operator=(const MateriaSource &other);
         ~MateriaSource();
         // End Orthodox Canonical Form
-        virtual ~MateriaSource() {}
-        virtual void learnMateria(AMateria* m);
-        virtual AMateria* createMateria(std::string const & type);
+        void learnMateria(AMateria* m);
+        AMateria* createMateria(std::string const & type);
 };
 
 #endif

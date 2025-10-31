@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:06:17 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 02:08:47 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 02:40:42 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <string>
 #include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 class ICharacter
 {
