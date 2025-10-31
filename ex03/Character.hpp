@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:15:01 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 02:31:01 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 03:20:30 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 
 #include <string>
 #include "ICharacter.hpp"
-#include "AMateria.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
 
-class Character : public ICharacter
+class   AMateria;
+
+class   Character : public ICharacter
 {
     private:
         std::string name;
@@ -33,7 +32,7 @@ class Character : public ICharacter
         ~Character();
         // End Orthodox Canonical Form
 
-        Character(std::string name);
+        Character(std::string const & name);
 
         std::string const & getName() const;
         void equip(AMateria* m);

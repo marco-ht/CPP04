@@ -6,21 +6,14 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:07:31 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 02:33:19 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 03:43:20 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CURE_HPP
 # define CURE_HPP
 
-#include <string>
 #include "AMateria.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-#include "ICharacter.hpp"
-#include "Character.hpp"
-#include "IMateriaSource.hpp"
-#include "MateriaSource.hpp"
 
 class Cure : public AMateria
 {       
@@ -32,7 +25,7 @@ class Cure : public AMateria
         ~Cure();
         // End Orthodox Canonical Form
         
-        Cure* clone() const;
+        AMateria* clone() const;
         void use(ICharacter& target);
 };
 

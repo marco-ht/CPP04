@@ -6,19 +6,13 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:53:12 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 02:33:25 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 03:59:01 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
-#include "AMateria.hpp"
 #include "Ice.hpp"
-#include "Cure.hpp"
 #include "ICharacter.hpp"
-#include "Character.hpp"
-#include "IMateriaSource.hpp"
-#include "MateriaSource.hpp"
 
 // Orthodox Canonical Form
 Ice::Ice():
@@ -27,14 +21,15 @@ AMateria("ice")
     std::cout << "Ice: default constructor" << std::endl;
 }
 
-Ice::Ice(Ice &other):
-AMateria(&other)
+Ice::Ice(const Ice &other):
+AMateria(other)
 {
     std::cout << "Ice: copy constructor" << std::endl;
 }
 
 Ice& Ice::operator=(const Ice &other)
 {
+    (void)other;
     std::cout << "Ice: assignment operator" << std::endl;
     return (*this);
 }
@@ -45,9 +40,9 @@ Ice::~Ice()
 }
 // End Orthodox Canonical Form
 
-Ice* Ice::clone() const
+AMateria* Ice::clone() const
 {
-    return (new Ice);
+    return (new Ice(*this));
 }
 
 void Ice::use(ICharacter& target)

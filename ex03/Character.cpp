@@ -6,17 +6,13 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:21:16 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 01:57:11 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 03:56:14 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
-#include "ICharacter.hpp"
 #include "Character.hpp"
 #include "AMateria.hpp"
-#include "Cure.hpp"
-#include "Ice.hpp"
 
 // Orthodox Canonical Form
 Character::Character()
@@ -30,7 +26,7 @@ Character::Character()
     std::cout << "Character: default constructor" << std::endl;
 }
 
-Character::Character(Character &other)
+Character::Character(const Character &other)
 {
     int i;
     
@@ -49,13 +45,18 @@ Character::Character(Character &other)
 Character& Character::operator=(const Character &other)
 {
     int i;
-    
+
+    if (this == &other)
+        return (*this);
     this->name = other.name;
     i = 0;
     while (i < 4) //copies materias in the 4 slots.
     {
         if (this->slots[i])
+        {
             delete this->slots[i];
+            this->slots[i] = NULL;
+        }
         if (other.slots[i])
             this->slots[i] = other.slots[i]->clone();   //deep cpy
         i++;
@@ -79,8 +80,10 @@ Character::~Character()
 }
 // End Orthodox Canonical Form
 
-Character::Character(std::string name)
+Character::Character(std::string const & name)
 {
+    int i;
+    
     this->name = name;
     i = 0;
     while (i < 4)
@@ -97,6 +100,8 @@ void Character::equip(AMateria* m)
 {
     int i;
 
+    if (!m)
+        return;
     i = 0;
     while (i < 4)
     {
@@ -107,17 +112,17 @@ void Character::equip(AMateria* m)
         }
         i++;
     }
-    //delete m; (a livello di main)
+    //delete m; (it is required to do nothing if slots full, delete in main)
 }
 
 void Character::unequip(int idx)
 {
-    if (i < 4 && slots[i])
-        slots[i] = NULL;
+    if (idx >= 0 && idx < 4)
+        slots[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter& target)
 {
-    if (i < 4 && slots[i])
-        slots[i]->use(target);
+    if (idx >= 0 && idx < 4 && slots[idx])
+        slots[idx]->use(target);
 }

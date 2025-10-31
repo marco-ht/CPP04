@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:06:17 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 02:40:42 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 02:56:01 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 # define ICHARACTER_HPP
 
 #include <string>
-#include "AMateria.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
 
-class ICharacter
+class   AMateria;
+
+class   ICharacter
 {
     public:
         virtual ~ICharacter() {}

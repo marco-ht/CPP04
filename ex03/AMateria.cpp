@@ -6,14 +6,12 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:11:00 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 02:08:17 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 03:54:53 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
 #include "ICharacter.hpp"
-#include "Character.hpp"
 #include "AMateria.hpp"
 
 AMateria::AMateria(std::string const & type):
@@ -29,7 +27,7 @@ type("AMateria")
     std::cout << "AMateria: default constructor" << std::endl;
 }
 
-AMateria::AMateria(AMateria &other):
+AMateria::AMateria(const AMateria &other):
 type(other.type)
 {
     std::cout << "AMateria: copy constructor" << std::endl;
@@ -37,6 +35,7 @@ type(other.type)
 
 AMateria& AMateria::operator=(const AMateria &other)
 {
+    (void)other;
     std::cout << "AMateria: assignment operator" << std::endl;
     return (*this);
 }
@@ -55,7 +54,5 @@ std::string const & AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-    if(target)
-    {
-    }
+    (void)target;
 }
