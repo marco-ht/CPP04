@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:53:12 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/30 20:09:47 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/30 23:56:55 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <string>
 #include "AMateria.hpp"
 #include "Ice.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
 
 // Orthodox Canonical Form
 Ice::Ice():
@@ -40,12 +42,6 @@ Ice::~Ice()
 }
 // End Orthodox Canonical Form
 
-//Returns the materia type
-std::string const & Ice::getType() const
-{
-    return (type);
-}
-
 Ice* Ice::clone() const
 {
     return (new Ice);
@@ -53,5 +49,5 @@ Ice* Ice::clone() const
 
 void Ice::use(ICharacter& target)
 {
-    std::cout << "* shoots an ice bolt at " << target.getname() <<" *" << std::endl;
+    std::cout << "* shoots an ice bolt at " << target.getName() <<" *" << std::endl;
 }

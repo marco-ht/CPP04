@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 18:51:37 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/30 23:56:16 by mpierant         ###   ########.fr       */
+/*   Created: 2025/10/31 01:04:18 by mpierant          #+#    #+#             */
+/*   Updated: 2025/10/31 01:34:25 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 #include <string>
+#include "IMateriaSource.hpp"
 #include "AMateria.hpp"
 
-class Ice : public AMateria
-{       
+class MateriaSource : public IMateriaSource
+{
+    private:
+        AMateria    *slots[4];
+        
     public:
         // Orthodox Canonical Form
-        Ice();
-        Ice(const Ice& other);
-        Ice& operator=(const Ice &other);
-        ~Ice();
+        MateriaSource();
+        MateriaSource(const MateriaSource& other);
+        MateriaSource& operator=(const MateriaSource &other);
+        ~MateriaSource();
         // End Orthodox Canonical Form
-        
-        Ice* clone() const;
-        void use(ICharacter& target);
+        virtual ~MateriaSource() {}
+        virtual void learnMateria(AMateria* m);
+        virtual AMateria* createMateria(std::string const & type);
 };
 
 #endif

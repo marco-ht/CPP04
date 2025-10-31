@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:08:56 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/30 20:12:20 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/30 23:56:31 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 #include <string>
 #include "AMateria.hpp"
 #include "Cure.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
 
 // Orthodox Canonical Form
 Cure::Cure():
-AMateria("Cure")
+AMateria("cure")
 {
     std::cout << "Cure: default constructor" << std::endl;
 }
@@ -40,12 +42,6 @@ Cure::~Cure()
 }
 // End Orthodox Canonical Form
 
-//Returns the materia type
-std::string const & Cure::getType() const
-{
-    return (type);
-}
-
 Cure* Cure::clone() const
 {
     return (new Cure);
@@ -53,5 +49,5 @@ Cure* Cure::clone() const
 
 void Cure::use(ICharacter& target)
 {
-    std::cout << "* heals " << target.getname() <<"’s wounds *" << std::endl;
+    std::cout << "* heals " << target.getName() <<"’s wounds *" << std::endl;
 }

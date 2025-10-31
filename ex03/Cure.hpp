@@ -6,12 +6,12 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:07:31 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/30 20:10:43 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/30 23:56:03 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Cure_HPP
-# define Cure_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 
 #include <string>
 #include "AMateria.hpp"
@@ -26,9 +26,7 @@ class Cure : public AMateria
         ~Cure();
         // End Orthodox Canonical Form
         
-        std::string const & getType() const; //Returns the materia type
-        
-        Cure* clone() const = 0;
+        Cure* clone() const;
         void use(ICharacter& target);
 };
 
