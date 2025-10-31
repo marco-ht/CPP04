@@ -6,12 +6,14 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:11:00 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/30 23:52:25 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 02:08:17 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include "ICharacter.hpp"
+#include "Character.hpp"
 #include "AMateria.hpp"
 
 AMateria::AMateria(std::string const & type):

@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 12:56:56 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/30 23:46:34 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/31 02:08:09 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define AMATERIA_HPP
 
 #include <string>
+#include "ICharacter.hpp"
+#include "Character.hpp"
 
 class AMateria
 {

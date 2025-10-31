@@ -1,5 +1,5 @@
 # Nome del progetto
-NAME    = animals
+NAME    = materia
 
 # Compiler e flags
 CC      = c++
