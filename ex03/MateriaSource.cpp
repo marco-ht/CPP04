@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 01:08:01 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 04:02:03 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/04 21:06:06 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,10 +90,12 @@ void MateriaSource::learnMateria(AMateria* m)
         if (!slots[i])
         {
             slots[i] = m;
+            std::cout << "Learned " << m->getType() << std::endl;
             return;
         }
         i++;
     }
+    std::cout << "No space to learn more Materias" << std::endl;
     //delete m; (it is required to do nothing if slots full, delete in main)
 }
 
@@ -105,8 +107,9 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     while (i < 4)
     {
         if (slots[i] && slots[i]->getType() == type)
-            return (slots[i]->clone());
+            return (slots[i]->clone()); //returns a deep copy (dinamic, in the heap)
         i++;
     }
+    std::cout << "Unknown materia type" << std::endl;
     return (NULL);
 }
