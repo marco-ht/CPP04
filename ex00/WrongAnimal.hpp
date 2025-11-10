@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongWrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:21:45 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/28 18:22:13 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 22:18:34 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class   WrongAnimal
     WrongAnimal();
     WrongAnimal(WrongAnimal& other);
     WrongAnimal& operator=(WrongAnimal &other);
-    ~WrongAnimal();
+    virtual ~WrongAnimal();
     // End Orthodox Canonical Form
 
     void    makeSound();
