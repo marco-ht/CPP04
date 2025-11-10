@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:53:09 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/29 02:29:09 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:51:41 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,12 @@ Animal::~Animal()
 }
 // End Orthodox Canonical Form
 
-/* void    Animal::makeSound()
-{
-    std::cout << "Animal: [Generic animal sound..]" << std::endl;
-} */
-
 std::string    Animal::getType()
 {
     return (Animal::type);
 }
 
-/* void    Animal::setId(int i, std::string str)
+void    Animal::setId(int i, std::string str)
 {
     std::cout << "Animal: can't set idea '" << str << "' in position " << i << std::endl;
 }
@@ -59,4 +54,4 @@ std::string    Animal::getId(int i)
 {
     std::cout << "Animal: can't get idea " << i << std::endl;
     return("");
-} */
+}

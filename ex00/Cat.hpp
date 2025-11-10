@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:57:51 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/28 18:00:37 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:36:19 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@
 
 class   Cat : public Animal
 {
-    protected:
-    std::string type;
-
     public:
     // Orthodox Canonical Form
     Cat();
@@ -30,7 +27,6 @@ class   Cat : public Animal
     // End Orthodox Canonical Form
 
     void    makeSound();
-    std::string    getType();
 };
 
 #endif

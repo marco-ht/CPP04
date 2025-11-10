@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:53:09 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/28 18:01:41 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:39:49 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ void    Animal::makeSound()
 
 std::string    Animal::getType()
 {
-    return (Animal::type);
+    return (type);
 }

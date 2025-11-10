@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:05:36 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/29 01:39:19 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:56:59 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ class   Dog : public Animal
     private:
     Brain *brain;
     
-    protected:
-    std::string type;
-
     public:
     // Orthodox Canonical Form
     Dog();
@@ -34,7 +31,6 @@ class   Dog : public Animal
     // End Orthodox Canonical Form
 
     void    makeSound();
-    std::string    getType();
     
     void        setId(int i, std::string str);
     std::string getId(int i);

@@ -18,9 +18,6 @@
 
 class   WrongCat : public WrongAnimal
 {
-    protected:
-    std::string type;
-
     public:
     // Orthodox Canonical Form
     WrongCat();
@@ -30,7 +27,6 @@ class   WrongCat : public WrongAnimal
     // End Orthodox Canonical Form
 
     void    makeSound();
-    std::string    getType();
 };
 
 #endif

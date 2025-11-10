@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:05:36 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/28 17:38:44 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:39:03 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@
 
 class   Dog : public Animal
 {
-    protected:
-    std::string type;
-
     public:
     // Orthodox Canonical Form
     Dog();
@@ -30,7 +27,6 @@ class   Dog : public Animal
     // End Orthodox Canonical Form
 
     void    makeSound();
-    std::string    getType();
 };
 
 #endif

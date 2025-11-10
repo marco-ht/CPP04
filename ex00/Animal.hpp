@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:48:02 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/28 17:51:38 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:38:35 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class   Animal
     // End Orthodox Canonical Form
 
     virtual void    makeSound();
-    virtual std::string    getType();
+    std::string    getType();
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:08:38 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/28 18:02:26 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:39:35 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,4 @@ Dog::~Dog()
 void    Dog::makeSound()
 {
      std::cout << "Dog: woof woof!" << std::endl;
-}
-
-std::string    Dog::getType()
-{
-    return (Dog::type);
 }

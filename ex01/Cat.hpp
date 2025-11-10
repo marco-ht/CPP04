@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:57:51 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/29 01:39:24 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:54:10 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ class   Cat : public Animal
     private:
     Brain *brain;
     
-    protected:
-    std::string type;
-
     public:
     // Orthodox Canonical Form
     Cat();
@@ -34,7 +31,6 @@ class   Cat : public Animal
     // End Orthodox Canonical Form
 
     void    makeSound();
-    std::string    getType();
 
     void        setId(int i, std::string str);
     std::string getId(int i);

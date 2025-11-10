@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 21:12:11 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/29 02:11:29 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:04:12 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,14 @@ Brain::~Brain()
 
 void    Brain::setIdeas(int i, const std::string str)
 {
-    if (i >= N)
+    if (i < 0 || i >= N)
         return;
     ideas[i] = str;
 }
 
 std::string Brain::getIdeas(int i) const
 {
-    if (i >= N)
+    if (i < 0 || i >= N)
         return ("");
     return (ideas[i]);
 }

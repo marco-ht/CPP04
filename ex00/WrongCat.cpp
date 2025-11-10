@@ -47,8 +47,3 @@ void    WrongCat::makeSound()
 {
      std::cout << "WrongCat: meaw meaw!" << std::endl;
 }
-
-std::string    WrongCat::getType()
-{
-    return (WrongCat::type);
-}
