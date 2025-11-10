@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: mpierant <mpierant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 01:57:36 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/31 04:52:59 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/11/10 20:12:47 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int main()
     delete temp;
 
     std::cout << std::endl << "* Test Self Assignment ===" << std::endl;
-    src3 = src3; // no double free
+    src3 = *((&src3)); // self assignement no double free
     std::cout << "-->Self-assignment OK" << std::endl;
 
     std::cout << std::endl << "* Test Destructor" << std::endl;
